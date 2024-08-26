@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const authRoutes = require('./routes/auth');
 const jobRoutes = require('./routes/jobs');
 const cors = require('cors');
+const serverless = require('serverless-http');
 
 dotenv.config();
 
@@ -27,3 +28,4 @@ app.get('/', (req, res) => {
     res.send('Hello server!')
 })
 
+module.exports.handler = serverless(app);
