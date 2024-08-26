@@ -26,3 +26,7 @@ app.listen(5000, () => {
 app.get('/', (req, res) => {
     res.send('Hello server!')
 })
+
+app.get('/newTest', (req, res) => {
+    res.send('Hello server! by test')
+})

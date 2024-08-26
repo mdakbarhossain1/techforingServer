@@ -26,7 +26,7 @@ router.post('/', authMiddleware, async (req, res) => {
 // Get all jobs for a user
 router.get('/', authMiddleware, async (req, res) => {
     try {
-        // res.send('Hello server!')
+        res.send('Hello server!')
         const jobs = await Job.find({ user: req.user.id });
         res.json(jobs);
 
